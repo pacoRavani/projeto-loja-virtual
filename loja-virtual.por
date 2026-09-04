@@ -17,6 +17,6 @@ programa {
     inteiro qtd_carrinho_prod1 = 0
     inteiro qtd_carrinho_prod2 = 0
 
-
+    // Colar a segunda parte aqui
   }
 }
