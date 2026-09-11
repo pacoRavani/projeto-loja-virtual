@@ -26,7 +26,7 @@ programa {
         // 1. LAÇO PRINCIPAL DO SISTEMA
         enquanto (opcao_menu_principal != 0)
         {
-            // Limpa a tela a cada iteração para manter o menu organizado
+        // Limpa a tela a cada iteração para manter o menu organizado
             limpa()
 
             escreva("=== BEM-VINDO À NOSSA LOJA VIRTUAL ===")
@@ -34,7 +34,7 @@ programa {
             escreva("---------------------------------------------")
 
             escreva("MENU PRINCIPAL")
-            
+
             escreva("1. Ver Produtos e Adicionar ao Carrinho (CREATE)")
 
             escreva("2. Ver Meus Itens no Carrinho (READ)")
@@ -50,8 +50,26 @@ programa {
 
             escolha (opcao_menu_principal)
             {
-                // ===================================================
-                // C - CREATE (Adicionar Itens ao Carrinho)
-                // ===================================================
+           // ===================================================
+           // C - CREATE (Adicionar Itens ao Carrinho)
+           // ===================================================
+                caso 1:
+                  limpa()
+                  escreva("--- CATÁLOGO DE PRODUTOS --- \n")
+
+                  escreva("1. Camisa Esportiva (Estoque: ", estoque_prod1, ") - R$ ", preco_prod1, "\n")
+
+                  escreva("2. Boné Casual (Estoque: ", estoque_prod2, ") - R$ ", preco_prod2, "\n")
+                  
+                  escreva("3. Tênis de Corrida (Estoque: ", estoque_prod3, ") - R$ ", preco_prod3, "\n")
+
+                  escreva("Escolha o produto que deseja adicionar: ")
+                  leia(opcao_crud)
+
+                  escreva("Digite a quantidade desejada: ")
+                  leia(quantidade_temp)
+                  se (opcao_crud == 1)
+                  {
+                      se (quantidade_temp > 0 e quantidade_temp <= estoque_prod1) {
   }
 }
