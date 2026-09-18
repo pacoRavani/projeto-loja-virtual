@@ -133,15 +133,30 @@ programa {
                              (qtd_carrinho_prod3 * preco_prod3)
 
 
-         // 2. ΕΤΑΡA DE PAGAMENTO
-         limpa()
-         se (valor_total_bruto > 0)
-         {
-             escreva("- FORMA DE PAGAMENTO ---")
-             escreva("
-  1. Pagamento via PIX (10% de desconto)")
-              escreva("
-  2. Cartão de Crédito (Valor normal)")
+                // 2. ΕΤΑΡA DE PAGAMENTO
+                limpa()
+                se (valor_total_bruto > 0)
+                {
+                    escreva("- FORMA DE PAGAMENTO ---")
+                    escreva("
+          1. Pagamento via PIX (10% de desconto)")
+                      escreva("
+          2. Cartao de Credito (Valor normal)")
+          escreva("Escolha a forma de pagamento: ")
+          leia (opcao_pagamento)
+          escolha (opcao_pagamento)
+          {
+          caso 1:
+          valor_desconto = valor_total_bruto * 0.10
+          valor_final = valor_total_bruto valor_desconto
+          pare
+          caso 2:
+          valor_desconto = 0.0
+          valor_final = valor_total_bruto
+          pare
+          caso contrario:
+          escreva ("Opção inválida! Processando valor normal.")
+
 
 
   }
