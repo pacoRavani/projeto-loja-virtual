@@ -30,21 +30,13 @@ programa {
             limpa()
 
             escreva("=== BEM-VINDO À NOSSA LOJA VIRTUAL ===")
-
             escreva("---------------------------------------------")
-
             escreva("MENU PRINCIPAL")
-
             escreva("1. Ver Produtos e Adicionar ao Carrinho (CREATE)")
-
             escreva("2. Ver Meus Itens no Carrinho (READ)")
-
             escreva("3. Alterar Quantidade no Carrinho (UPDATE)")
-
             escreva("4. Remover Item do Carrinho (DELETE)")
-
             escreva("0. Finalizar Compra e Ir ao Pagamento")
-
             escreva("Escolha uma opção: ")
             leia(opcao_menu_principal)
 
@@ -68,8 +60,7 @@ programa {
 
                   escreva("Digite a quantidade desejada: ")
                   leia(quantidade_temp)
-                  se (opcao_crud == 1)
-                  {
+                  se (opcao_crud == 1){
                       se (quantidade_temp > 0 e quantidade_temp <= estoque_prod1) {
                        qtd_carrinho_prod1 = qtd_carrinho_prod1 + quantidade_temp
                         estoque_prod1 = estoque_prod1 quantidade_temp
@@ -78,14 +69,13 @@ programa {
                      escreva ("Quantidade inválida ou estoque insuficiente!")
                   }
                 
-               } senao se (opcao_crud == 2){
-                se (quantidade_temp > 0 e quantidade_temp <= estoque_prod2) {
-                qtd_carrinho_prod2 = qtd_carrinho_prod2 + quantidade_temp
-                estoque_prod2 = estoque_prod2 quantidade_temp
-                escreva ("Item adicionado ao carrinho com sucesso!") }senao{
-
-
-  escreva("Quantidade inválida ou estoque insuficiente!")
+                  } senao se (opcao_crud == 2){
+                    se (quantidade_temp > 0 e quantidade_temp <= estoque_prod2) {
+                    qtd_carrinho_prod2 = qtd_carrinho_prod2 + quantidade_temp
+                    estoque_prod2 = estoque_prod2 quantidade_temp
+                    escreva ("Item adicionado ao carrinho com sucesso!") 
+                    }senao{
+                    escreva("Quantidade inválida ou estoque insuficiente!")
 
 
            }
